@@ -52,7 +52,7 @@ if "randoms" not in st.session_state:
     print(st.session_state["randoms"])
 #streamlit
 st.header(st.session_state["randoms"][0])
-st.session_state.nigger=""
+st.session_state.nig=""
 #
 def check_exists_by_xpath(xpath):
     try:
@@ -85,13 +85,13 @@ def rima(prva,druga,mu=0.8):
     else:
         return "Nema te riječi"
 def r():
-    x=rima(st.session_state["randoms"][0],st.session_state.nigger,multiplier)
+    x=rima(st.session_state["randoms"][0],st.session_state.nig,multiplier)
     if isinstance(x, float):
         st.session_state["poeni"]+=x
         st.markdown(st.session_state["poeni"])
     else:
         st.markdown(x)
-pogod=st.text_input("Rima:",key="nigger",on_change=r)
+pogod=st.text_input("Rima:",key="nig",on_change=r)
 timer()
     #py -m streamlit run Webcopy.py
 #rjecnik da ubrza umjesto hjp, bolji rhyme algoritam
